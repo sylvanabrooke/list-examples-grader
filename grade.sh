@@ -5,7 +5,8 @@ set -e
 rm -rf student-submission
 git clone $1 student-submission
 
-if [[-f ListExamples.java]];
+cd student-submission
+if test -f ListExamples.java
 then 
     echo "ListExamples.jav exists"
     exit 0
