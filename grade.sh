@@ -28,4 +28,12 @@ fi
 
 set +e 
 
-java -cp ".:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples
+java -cp ".:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples > score.txt
+
+
+
+grep -n "Error:" score.txt
+
+$score= $(grep -n 'Failures:' score.txt)
+#echo ${score:-1}
+echo "$score"
