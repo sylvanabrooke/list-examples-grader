@@ -32,7 +32,8 @@ java -cp ".:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar" org.junit.runner.JUn
 
 
 
-grep -n "Error:" score.txt
+score= grep -F "Failures: " score.txt
+numFail= echo Score: $((4 - ${score:-1}))/4
 
 #$score= $(grep -n 'Failures:' score.txt)
 #echo ${score:-1}
