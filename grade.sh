@@ -16,17 +16,18 @@ fi
 
 cp ListExamples.java ../
 
+set +e 
+
 cd ..
 javac -cp ".:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" TestListExamples.java ListExamples.java
 if test $? -eq 0;
 then
     echo "compile sucess!!!"
 else 
-    echo "quit CS!! you're so pretty"
+    echo "compile unsuccessful! Score: 0/4"
     exit 1
 fi
 
-set +e 
 
 java -cp ".:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples > score.txt
 
