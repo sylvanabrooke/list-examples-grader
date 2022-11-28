@@ -10,7 +10,7 @@ if test -f ListExamples.java
 then 
     echo "ListExamples.jav exists"
 else 
-    echo "ListExamples.java does not existtttttttt"
+    echo "ListExamples.java does not existtttttttt Score: 0/4"
     exit 1
 fi
 
